@@ -1,4 +1,4 @@
-# Generate Photos
+# Generate Photos 
 
 A web application that generates images based on user input using the Unsplash API.
 

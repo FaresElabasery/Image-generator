@@ -19,9 +19,12 @@
     <div class="container">
         <!-- title of the project -->
         <h2 id="header">Image Generator</h2>
-        <!-- result of images -->
-        <!-- <div class="images">
-        </div> -->
+
+        <!-- input -->
+        <div class="prompt">
+            <input id="inputText" type="text" aria-label="Text to generate photo" placeholder="Type photo Name ">
+            <button onclick="getImages()" id="generateBtn">Generate</button>
+        </div>
 
         <div class="slider" style="
         --width:400px;
@@ -46,11 +49,7 @@
 
 
 
-        <!-- input -->
-        <div class="prompt">
-            <input id="inputText" type="text" aria-label="Text to generate photo">
-            <button onclick="getImages()" id="generateBtn">Generate</button>
-        </div>
+
     </div>
 
     <script src="script.js"></script>

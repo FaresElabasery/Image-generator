@@ -44,38 +44,45 @@ body {
 
 .container .prompt {
     background-color: var(--primary-color);
-    padding: 5px 0 5px 5px;
+    position: relative;
+    border-radius: 5px;
     width: 620px;
-    border: 3px solid var(--secondary-color);
+    /* border: 3px solid var(--secondary-color); */
     border-radius: 10px;
 }
-
-.container .slider:hover~.prompt {
-    opacity: 0.1;
-    transition: all 0.3s linear;
-}
-
 
 .container input,
 button {
     border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
     padding: 10px;
     font-size: 20px;
     color: var(--forth-color);
-    opacity: 0.8;
+    border-radius: 20px;
+    outline: none;
 }
 
 .container input {
-    background-color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white !important;
+    color: var(--primary-color);
+    font-weight: 900;
     min-width: 75%;
+    opacity: 0.8;
     outline: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .container button {
     background-color: var(--secondary-color);
     cursor: pointer;
     width: 23%;
-    border-radius: 10px;
+
+    border-left-width: 50%;
 }
 
 .container button:hover {
@@ -149,7 +156,7 @@ button {
     height: var(--height);
     position: absolute;
     left: 100%;
-    animation: autoRun 10s linear infinite;
+    animation: autoRun 10s ease-out infinite;
     animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
     transition: all 0.5s;
 }
@@ -192,9 +199,12 @@ button {
     }
 
     .container .prompt {
-        width: 100%;
+        width: 80%;
     }
 
+    .container button {
+        width: 33%;
+    }
 
     .container .slider .item {
         border-radius: 20px;
@@ -208,13 +218,15 @@ button {
     }
 
     .container .prompt {
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        flex-wrap: wrap;
+        margin: 40px;
+    }
+
+    .container input, button {
+        font-size: 14px !important;
     }
 
     .container button {
-        width: 50%;
+        width: 40%;
+
     }
 }
